@@ -14,7 +14,6 @@ export function Accordion(props: AccordionType) {
     );
 }
 
-
 type AccordionTitleType = {
     title: string
 }
