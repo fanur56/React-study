@@ -6,70 +6,17 @@ type RatingType = {
 
 function Rating(props: RatingType) {
     console.log("AccordionBody rendering");
-    if (props.value === 1) {
+    {
         return (
             <div>
-                <Stars selected={true}/>
-                <Stars selected={false}/>
-                <Stars selected={false}/>
-                <Stars selected={false}/>
-                <Stars selected={false}/>
+                <Stars selected={props.value > 0}/>
+                <Stars selected={props.value > 1}/>
+                <Stars selected={props.value > 2}/>
+                <Stars selected={props.value > 3}/>
+                <Stars selected={props.value > 4}/>
             </div>
         );
     }
-    if (props.value === 2) {
-        return (
-            <div>
-                <Stars selected={true}/>
-                <Stars selected={true}/>
-                <Stars selected={false}/>
-                <Stars selected={false}/>
-                <Stars selected={false}/>
-            </div>
-        );
-    }
-    if (props.value === 3) {
-        return (
-            <div>
-                <Stars selected={true}/>
-                <Stars selected={true}/>
-                <Stars selected={true}/>
-                <Stars selected={false}/>
-                <Stars selected={false}/>
-            </div>
-        );
-    }
-    if (props.value === 4) {
-        return (
-            <div>
-                <Stars selected={true}/>
-                <Stars selected={true}/>
-                <Stars selected={true}/>
-                <Stars selected={true}/>
-                <Stars selected={false}/>
-            </div>
-        );
-    }
-    if (props.value === 5) {
-        return (
-            <div>
-                <Stars selected={true}/>
-                <Stars selected={true}/>
-                <Stars selected={true}/>
-                <Stars selected={true}/>
-                <Stars selected={true}/>
-            </div>
-        );
-    }
-    return (
-        <div>
-            <Stars selected={false}/>
-            <Stars selected={false}/>
-            <Stars selected={false}/>
-            <Stars selected={false}/>
-            <Stars selected={false}/>
-        </div>
-    )
 }
 
 type StarsType = {
