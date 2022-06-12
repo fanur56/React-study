@@ -1,10 +1,5 @@
 import React, {useState} from "react";
 
-/*type OnPropsType={
-    on:boolean
-}*/
-
-
 export const OnOff = () => {
     console.log("OnOff rendering")
 

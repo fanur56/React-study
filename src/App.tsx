@@ -3,6 +3,7 @@ import './App.css';
 import {Accordion} from "./Accordion/Accordion";
 import Rating from "./Accordion/Rating";
 import {OnOff} from "./OnOff";
+import {UncontrolledAccordion} from "./Accordion/UncontrolledAccordion";
 
 function App() {
     console.log("App rendering");
@@ -18,6 +19,7 @@ function App() {
             <Rating value = {3} />
             <Rating value = {4} />
             <Rating value = {5} />
+            <UncontrolledAccordion titleValue = {"Menu1"}/>
             <OnOff />
             <OnOff />
             <OnOff />
