@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
 import {Accordion} from "./Accordion/Accordion";
-import Rating from "./Accordion/Rating";
-import {OnOff} from "./OnOff";
-import {UncontrolledAccordion} from "./Accordion/UncontrolledAccordion";
+import Rating from "./Rating/Rating";
+import {OnOff} from "./OnOff/OnOff";
+import {UncontrolledAccordion} from "./UncontrolledAccordion/UncontrolledAccordion";
+import UncontrolledRating from "./UncontrolledRating/UncontrolledRating";
 
 function App() {
     console.log("App rendering");
@@ -13,12 +14,7 @@ function App() {
             <PageTitle title = {"My friends"}/>
             <Accordion titleValue = {"Menu1"} collapsed = {true}/>
             <Accordion titleValue = {"Menu2"} collapsed = {false}/>
-            <Rating value = {0} />
-            <Rating value = {1} />
-            <Rating value = {2} />
-            <Rating value = {3} />
-            <Rating value = {4} />
-            <Rating value = {5} />
+            <UncontrolledRating />
             <UncontrolledAccordion titleValue = {"Menu1"}/>
             <UncontrolledAccordion titleValue = {"Menu2"}/>
             <OnOff />
