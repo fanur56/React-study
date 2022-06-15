@@ -8,7 +8,7 @@ import {UncontrolledAccordion} from "./Accordion/UncontrolledAccordion";
 function App() {
     console.log("App rendering");
     return (
-        <div>
+        <div className="App">
             <PageTitle title = {"This is APP"}/>
             <PageTitle title = {"My friends"}/>
             <Accordion titleValue = {"Menu1"} collapsed = {true}/>
@@ -20,6 +20,7 @@ function App() {
             <Rating value = {4} />
             <Rating value = {5} />
             <UncontrolledAccordion titleValue = {"Menu1"}/>
+            <UncontrolledAccordion titleValue = {"Menu2"}/>
             <OnOff />
             <OnOff />
             <OnOff />
