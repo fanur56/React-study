@@ -5,31 +5,21 @@ function UncontrolledRating() {
 
     return (
         <div>
-            <Stars selected={value > 0}/>
-            <button onClick={() => {
-                setValue(1)
-            }}>0
-            </button>
-            <Stars selected={value > 1}/>
-            <button onClick={() => {
-                setValue(2)
-            }}>1
-            </button>
-            <Stars selected={value > 2}/>
-            <button onClick={() => {
-                setValue(3)
-            }}>2
-            </button>
-            <Stars selected={value > 3}/>
-            <button onClick={() => {
-                setValue(4)
-            }}>3
-            </button>
-            <Stars selected={value > 4}/>
-            <button onClick={() => {
-                setValue(5)
-            }}>4
-            </button>
+            <Stars selected={value > 0}
+                   setValue={()=>{setValue(1)}}/>
+
+            <Stars selected={value > 1}
+                   setValue={()=>{setValue(2)}}/>
+
+            <Stars selected={value > 2}
+                   setValue={()=>{setValue(3)}}/>
+
+            <Stars selected={value > 3}
+                   setValue={()=>{setValue(4)}}/>
+
+            <Stars selected={value > 4}
+                   setValue={()=>{setValue(5)}}/>
+
         </div>
     );
 
@@ -37,14 +27,15 @@ function UncontrolledRating() {
 
 type StarsType = {
     selected: boolean
+    setValue: () => void
 }
 
 function Stars(props: StarsType) {
     console.log("Stars rendering");
     return (
-        <>
-            {props.selected ? <span><b>Star</b> </span> : <span>Star </span>}
-        </>
+        <span onClick={()=>{props.setValue()}}>
+            {props.selected ? <b>Star </b> : "Star "}
+        </span>
     )
 }
 
