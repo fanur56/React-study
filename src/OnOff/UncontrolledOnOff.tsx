@@ -1,21 +1,16 @@
 import React, {useState} from "react";
 
-export type OnOffPropsType = {
-    value: boolean
-    setOn: (value:boolean)=>void
-}
-
-export const OnOff = (props:OnOffPropsType) => {
+export const UncontrolledOnOff = () => {
     console.log("OnOff rendering")
 
-
+    let [on, setOn] = useState(false)
 
     const OnStyle = {
         display: "inline-block",
         width: "40px",
         height: "30px",
         border: "1px solid ,black",
-        backgroundColor: props.value ? "green" : "white",
+        backgroundColor: on ? "green" : "white",
         marginLeft: "3px",
     }
 
@@ -24,7 +19,7 @@ export const OnOff = (props:OnOffPropsType) => {
         width: "40px",
         height: "30px",
         border: "1px solid ,black",
-        backgroundColor: props.value ? "white" : "red",
+        backgroundColor: on ? "white" : "red",
         marginLeft: "3px"
     }
 
@@ -34,14 +29,14 @@ export const OnOff = (props:OnOffPropsType) => {
         height: "10px",
         borderRadius: "50%",
         border: "1px solid black",
-        backgroundColor: props.value ? "green" : "red",
+        backgroundColor: on ? "green" : "red",
         marginLeft: "3px"
     }
     return (
         <div>
             <hr/>
-            <div style={OnStyle} onClick={()=>{props.setOn(true)}}>On</div>
-            <div style={OffStyle} onClick={()=>{props.setOn(false)}}>Off</div>
+            <div style={OnStyle} onClick={()=>{setOn(true)}}>On</div>
+            <div style={OffStyle} onClick={()=>{setOn(false)}}>Off</div>
             <div style={IndicatorStyle}></div>
         </div>
     )
