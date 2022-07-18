@@ -12,6 +12,7 @@ import {
 } from "./UncontrolledInput/UncontrolledInput";
 import {ControlledInput} from "./ControlledComponents/ControlledInput";
 import {ControlledCheckBox} from "./ControlledComponents/ControlledCheckBox";
+import {ControlledSelect} from "./ControlledComponents/ControlledSelect";
 
 function App() {
     console.log("App rendering");
@@ -35,6 +36,7 @@ function App() {
             <GetValueFromUncontrolledInputByButtonPress/>
             <ControlledInput/>
             <ControlledCheckBox/>
+            <ControlledSelect/>
         </div>
     );
 }

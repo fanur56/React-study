@@ -8,7 +8,6 @@ export const ControlledCheckBox = () => {
     }
     return (
         <div>
-            <hr/>
             <span>ControlledCheckBox:  </span>
             <input type={"checkbox"} checked={parentValue} onChange={onChangeHandler}/>
             <hr/>
