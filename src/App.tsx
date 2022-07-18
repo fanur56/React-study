@@ -6,12 +6,16 @@ import {UncontrolledOnOff} from "./OnOff/UncontrolledOnOff";
 import {UncontrolledAccordion} from "./UncontrolledAccordion/UncontrolledAccordion";
 import UncontrolledRating from "./UncontrolledRating/UncontrolledRating";
 import {OnOff} from "./OnOff/OnOff";
+import {
+    GetValueFromUncontrolledInputByButtonPress,
+    TrackValueOfUncontrolledInput
+} from "./UncontrolledInput/UncontrolledInput";
 
 function App() {
     console.log("App rendering");
     const [ratingValue, setRatingValue] = useState<RatingType>(2)
     const [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
-    let [on, setOn] = useState(false)
+    const [on, setOn] = useState(false)
     return (
         <div className="App">
             <PageTitle title={"This is APP"}/>
@@ -25,6 +29,8 @@ function App() {
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <UncontrolledOnOff/>
             <OnOff value={on} setOn={setOn}/>
+            <TrackValueOfUncontrolledInput/>
+            <GetValueFromUncontrolledInputByButtonPress/>
         </div>
     );
 }
