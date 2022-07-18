@@ -11,6 +11,7 @@ import {
     TrackValueOfUncontrolledInput
 } from "./UncontrolledInput/UncontrolledInput";
 import {ControlledInput} from "./ControlledComponents/ControlledInput";
+import {ControlledCheckBox} from "./ControlledComponents/ControlledCheckBox";
 
 function App() {
     console.log("App rendering");
@@ -33,6 +34,7 @@ function App() {
             <TrackValueOfUncontrolledInput/>
             <GetValueFromUncontrolledInputByButtonPress/>
             <ControlledInput/>
+            <ControlledCheckBox/>
         </div>
     );
 }
