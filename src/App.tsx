@@ -10,6 +10,7 @@ import {
     GetValueFromUncontrolledInputByButtonPress,
     TrackValueOfUncontrolledInput
 } from "./UncontrolledInput/UncontrolledInput";
+import {ControlledInput} from "./ControlledComponents/ControlledInput";
 
 function App() {
     console.log("App rendering");
@@ -31,6 +32,7 @@ function App() {
             <OnOff value={on} setOn={setOn}/>
             <TrackValueOfUncontrolledInput/>
             <GetValueFromUncontrolledInputByButtonPress/>
+            <ControlledInput/>
         </div>
     );
 }
