@@ -25,7 +25,8 @@ function App() {
             <PageTitle title={"My friends"}/>
             <Accordion titleValue={"Menu1"}
                        collapsed={accordionCollapsed}
-                       setAccordionCollapsed={setAccordionCollapsed}/>
+                       setAccordionCollapsed={setAccordionCollapsed}
+                       items={["Fanur", "Victor", "Igor"]}/>
             <UncontrolledRating/>
             <UncontrolledAccordion titleValue={"Menu1"}/>
             <UncontrolledAccordion titleValue={"Menu2"}/>
