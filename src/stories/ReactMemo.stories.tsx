@@ -23,7 +23,7 @@ export const Example1 = () => {
     const [count, setCount] = useState(0)
     const [users, setUsers] = useState(["Igor", "Victor", "Dima"])
     const addUser = ()=>{
-        setUsers([...users, "Sveta" + new Date().getTime()])
+        setUsers([...users, "Sveta " + Math.random()])
     }
 
     return <>
