@@ -19,7 +19,7 @@ const UsersSecret = (props: { users: Array<string> }) => {
 
 const Users = React.memo(UsersSecret)
 
-export const Example1 = () => {
+export const ExampleMemo = () => {
     const [count, setCount] = useState(0)
     const [users, setUsers] = useState(["Igor", "Victor", "Dima"])
     const addUser = ()=>{
