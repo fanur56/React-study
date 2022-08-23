@@ -9,9 +9,9 @@ export const SimpleExample = () => {
 
     const [count, setCount] = useState(1);
 
-    useEffect(()=>{
+    useEffect(() => {
         console.log("useEffect every time render");
-        document.title=count.toString();
+        document.title = count.toString();
         // api.getUsers().then("")
         // setInterval
         // indexedDB
@@ -19,18 +19,36 @@ export const SimpleExample = () => {
         // document.title="User"
     })
 
-    useEffect(()=>{
+    useEffect(() => {
         console.log("useEffect one time (first) render");
-        document.title=count.toString();
+        document.title = count.toString();
     }, [])
 
-    useEffect(()=>{
+    useEffect(() => {
         console.log("useEffect one time (first) render and render on dependency change");
-        document.title=count.toString();
+        document.title = count.toString();
     }, [count])
 
     return <>
         Hello, {count}
-        <button onClick={() => setCount(count+1)}>+</button>
+        <button onClick={() => setCount(count + 1)}>+</button>
+    </>
+}
+
+export const SimpleSetTimeoutExample = () => {
+    console.log("SimpleSetTimeoutExample");
+
+    const [count, setCount] = useState(1);
+
+    useEffect(() => {
+        setTimeout(() => {
+            console.log("setTimeout")
+            document.title = count.toString();
+        }, 1000)
+    }, [count])
+
+    return <>
+        Hello, {count}
+        <button onClick={() => setCount(count + 1)}>+</button>
     </>
 }
